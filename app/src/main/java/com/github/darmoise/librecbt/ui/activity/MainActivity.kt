@@ -1,4 +1,4 @@
-package com.github.darmoise.librecbt
+package com.github.darmoise.librecbt.ui.activity
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import com.github.darmoise.librecbt.R
 import com.github.darmoise.librecbt.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
