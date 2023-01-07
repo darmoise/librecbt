@@ -3,6 +3,7 @@ package com.github.darmoise.librecbt.ui.fragment
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -22,14 +23,18 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
 
         buttonFirst.setOnClickListener {
             vm.start()
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+          //  findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
         onObserversCreate()
     }
 
     private fun onObserversCreate() {
         vm.liveDate.observe(viewLifecycleOwner) {
-            Log.d(TAG, "$it");
+//            Log.d(TAG, "$it");
+            vm.start()
+        }
+        vm.progressLiveData.observe(viewLifecycleOwner) {
+            binding.progressBar.isVisible = it
         }
     }
 

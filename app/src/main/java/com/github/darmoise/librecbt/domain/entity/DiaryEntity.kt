@@ -1,10 +1,10 @@
-package com.github.darmoise.librecbt.model
+package com.github.darmoise.librecbt.domain.entity
 
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 import java.util.*
 
-open class DiaryEntry(
+open class DiaryEntity(
     @PrimaryKey
     var id: UUID = UUID.randomUUID(),
     var event: String? = null, // Событие
@@ -14,5 +14,5 @@ open class DiaryEntry(
     var cognitiveDistortion: String? = null, // Когнитивное искажение
     var intensity: Int? = null, // Интенсивность
     var rationalAnswer: String? = null, // Рациональный ответ
-    var timestamp: Long? = null
+    var time: String? = null
 ) : RealmObject()

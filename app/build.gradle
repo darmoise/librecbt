@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "com.github.darmoise.librecbt"
-        minSdk 21
+        minSdk 24
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -51,7 +51,13 @@ dependencies {
     implementation deps.lifecycle.viewmodel
     implementation deps.lifecycle.viewmodel_ktx
 
+    implementation deps.rxjava3
+    implementation deps.rx_android3
+
     implementation deps.hilt.android
+
+    implementation deps.threetenabp
+
     kapt deps.hilt.compiler
 
     testImplementation deps.junit
