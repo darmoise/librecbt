@@ -3,16 +3,17 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'realm-android'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
     namespace 'com.github.darmoise.librecbt'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.github.darmoise.librecbt"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -46,14 +47,19 @@ dependencies {
     implementation deps.navigation.fragment_ktx
     implementation deps.navigation.ui_ktx
     implementation deps.viewbindingpropertydelegate
-    implementation deps.dagger.runtime
-    implementation deps.realm.android
 
-    kapt deps.dagger.runtime
+    implementation deps.lifecycle.viewmodel
+    implementation deps.lifecycle.viewmodel_ktx
 
+    implementation deps.hilt.android
+    kapt deps.hilt.compiler
 
     testImplementation deps.junit
 
     androidTestImplementation deps.atsl.ext_junit
     androidTestImplementation deps.espresso.core
+}
+
+kapt {
+    correctErrorTypes true
 }
