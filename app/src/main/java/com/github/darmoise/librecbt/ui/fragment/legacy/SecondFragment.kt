@@ -1,4 +1,4 @@
-package com.github.darmoise.librecbt.ui.fragment
+package com.github.darmoise.librecbt.ui.fragment.legacy
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,6 +11,7 @@ import com.github.darmoise.librecbt.databinding.FragmentSecondBinding
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
+@Deprecated(message = "Легаси")
 class SecondFragment : Fragment(R.layout.fragment_second) {
 
     private val binding: FragmentSecondBinding by viewBinding()

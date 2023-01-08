@@ -1,4 +1,4 @@
-package com.github.darmoise.librecbt.ui.fragment
+package com.github.darmoise.librecbt.ui.fragment.legacy
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -13,6 +13,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 import org.threeten.bp.LocalDateTime
 import javax.inject.Inject
 
+@Deprecated(message = "Легаси")
 @HiltViewModel
 class FirstViewModel @Inject constructor(
     private val diaryService: DiaryService

@@ -58,6 +58,8 @@ dependencies {
 
     implementation deps.threetenabp
 
+    implementation deps.swiperefreshlayout
+
     kapt deps.hilt.compiler
 
     testImplementation deps.junit

@@ -1,17 +1,16 @@
-package com.github.darmoise.librecbt.ui.fragment
+package com.github.darmoise.librecbt.ui.fragment.legacy
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.github.darmoise.librecbt.R
 import com.github.darmoise.librecbt.databinding.FragmentFirstBinding
 import dagger.hilt.android.AndroidEntryPoint
 
+@Deprecated(message = "Легаси")
 @AndroidEntryPoint
 class FirstFragment : Fragment(R.layout.fragment_first) {
     private val binding: FragmentFirstBinding by viewBinding()

@@ -68,7 +68,7 @@ versions.realm = "10.6.0"
 versions.joda_time = "2.10"
 versions.hilt = "2.44.2"
 versions.threetenabp = "1.4.4"
-
+versions.swiperefreshlayout = "1.1.0"
 ext.versions = versions
 
 def build_versions = [:]
@@ -231,6 +231,8 @@ deps.transition = "androidx.transition:transition:$versions.transition"
 
 deps.truth = "com.google.truth:truth:$versions.truth"
 deps.joda_time = "joda-time:joda-time:$versions.joda_time"
+
+deps.swiperefreshlayout = "androidx.swiperefreshlayout:swiperefreshlayout:$versions.swiperefreshlayout"
 
 def work = [:]
 work.runtime = "androidx.work:work-runtime:$versions.work"
