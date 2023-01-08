@@ -13,5 +13,12 @@
     <string name="no_diary_entries">Вы пока еще ничего не записали в дневник</string>
     <string name="diary_error">Что-то пошло не так…</string>
 
-
+    <string name="diary_event">Событие:</string>
+    <string name="diary_thoughts">Мысли:</string>
+    <string name="diary_emotions">Эмоции:</string>
+    <string name="diary_reaction">Реакция:</string>
+    <string name="diary_cognitive_distortion">Когнитивное искажение:</string>
+    <string name="diary_intensity">Интенсивность:</string>
+    <string name="diary_rational_answer">Рациональный ответ:</string>
+    <string name="diary_time">Время:</string>
 </resources>

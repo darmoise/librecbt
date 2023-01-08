@@ -7,8 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.github.darmoise.librecbt.R
 import com.github.darmoise.librecbt.databinding.RecyclerviewDiaryItemBinding
 import com.github.darmoise.librecbt.domain.ui.DiaryUiItem
+import org.threeten.bp.format.DateTimeFormatter
 
 class DiaryRecyclerAdapter : RecyclerView.Adapter<DiaryRecyclerAdapter.ViewHolder>() {
+    private val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("d MMMM yyyy HH:mm")
+
     private var dataSet: List<DiaryUiItem> = listOf()
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -21,13 +24,16 @@ class DiaryRecyclerAdapter : RecyclerView.Adapter<DiaryRecyclerAdapter.ViewHolde
         return ViewHolder(view)
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) = with(viewHolder.binding) {
-        // Get element from your dataset at this position and replace the
-        // contents of the view with that element
         val item = dataSet[position]
-        textViewLarge.text = item.rationalAnswer
-        textViewSmall.text = item.reaction
+        diaryEvent.text = item.event
+        diaryThoughts.text = item.thoughts
+        diaryEmotions.text = item.emotions
+        diaryReaction.text = item.reaction
+        diaryCognitiveDistortion.text = item.cognitiveDistortion
+        diaryIntensity.text = item.intensity.toString()
+        diaryRationalAnswer.text = item.rationalAnswer
+        diaryTime.text = formatter.format(item.time)
     }
 
     fun addAll(list: List<DiaryUiItem>) {
